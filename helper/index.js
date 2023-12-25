@@ -11,7 +11,7 @@ const liveEdit = envConfig.CONTENTSTACK_LIVE_EDIT_TAGS === 'true';
 
 export const getHeaderRes = async () => {
   const response = await Stack.getEntry({
-    contentTypeUid: 'header',
+    contentTypeUid: 'header_new',
     referenceFieldPath: ['navigation_menu.page_reference'],
     jsonRtePath: ['notification_bar.announcement_text'],
   });
