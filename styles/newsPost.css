@@ -1,0 +1,17 @@
+.NewsPageSection{
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    padding: 40px;
+}
+.leftSection{
+    width: 40%;
+
+}
+.rightSection{
+    width: 60%;
+}
+.title{
+    font-size: 20px;
+}

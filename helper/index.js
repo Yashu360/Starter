@@ -55,6 +55,27 @@ export const getPageRes = async (entryUrl) => {
   liveEdit && addEditableTags(response[0], 'page', true);
   return response[0];
 };
+export const getNewsListRes = async (entryUrl) => {
+  const response = await Stack.getEntry({
+    contentTypeUid: 'news',
+    referenceFieldPath: undefined,
+    jsonRtePath: ['news_section'],
+  });
+  liveEdit &&
+    response[0].forEach((entry) => addEditableTags(entry, 'news', true));
+  return response[0];
+};
+
+export const getNewsPostRes = async (entryUrl) => {
+  const response = await Stack.getEntryByUrl({
+    contentTypeUid: 'news',
+    entryUrl,
+    referenceFieldPath: ['more_such_articles'],
+    jsonRtePath: ['news_section'],
+  });
+  liveEdit && addEditableTags(response[0], 'news', true);
+  return response[0];
+};
 
 export const getBlogListRes = async () => {
   const response = await Stack.getEntry({
