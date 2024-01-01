@@ -1,6 +1,6 @@
 @import "./json-preview.css";
 @import "./tool-tip.css";
-
+@import "./newsPost.css";
 body {
   font-family: Inter, sans-serif;
   font-size: 14px;
